@@ -125,9 +125,7 @@ export function getMetricMetaInfo(metric) {
     }
   };
 
-  console.log("metric: ", metric);
-
-  console.log(info[metric].displayName);
-
-  return typeof metric === undefined ? info.sleep.getIcon() : info[metric];
+  console.log(info)
+  console.log("tipo metric: ", typeof(metric))
+  return  metric !== undefined ? info[metric] : info;
 }
