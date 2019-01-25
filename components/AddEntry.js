@@ -26,7 +26,7 @@ class AddEntry extends Component {
     const { max, step } = getMetricMetaInfo(metric);
 
     this.setState(prevState => {
-      const count = state[metric] + step;
+      const count = prevState[metric] + step;
 
       return {
         ...prevState,
@@ -37,10 +37,10 @@ class AddEntry extends Component {
 
   decrement = metric => {
     this.setState(prevState => {
-      const count = state[metric] - getMetricMetaInfo(metric).step;
+      const count = prevState[metric] - getMetricMetaInfo(metric).step;
 
       return {
-        ...state,
+        ...prevState,
         [metric]: count < 0 ? 0 : count
       };
     });
