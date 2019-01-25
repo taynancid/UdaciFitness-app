@@ -125,7 +125,13 @@ export function getMetricMetaInfo(metric) {
     }
   };
 
-  console.log(info)
-  console.log("tipo metric: ", typeof(metric))
-  return  metric !== undefined ? info[metric] : info;
+  console.log(info);
+  console.log("tipo metric: ", typeof metric);
+  return metric !== undefined ? info[metric] : info;
+}
+
+export function getDailyReminderValue() {
+  return {
+    today: "dont forget to log your data for today!"
+  };
 }
