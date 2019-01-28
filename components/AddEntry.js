@@ -94,6 +94,7 @@ class AddEntry extends Component {
     });
 
     submitEntry({ key, entry });
+    this.props.navigation.goBack();
   };
 
   reset = () => {
